@@ -6,15 +6,16 @@
 local M = {}
 
 M.base46 = {
-	theme = "onedark",
-
+	theme = "catppuccin",
+  hl_override = require('configs.highlights').override
 	-- hl_override = {
 	-- 	Comment = { italic = true },
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
 
--- M.nvdash = { load_on_startup = true }
+M.nvdash = require("configs.ui").nvdash
+
 -- M.ui = {
 --       tabufline = {
 --          lazyload = false
@@ -23,8 +24,7 @@ M.base46 = {
 
 -- MY CONFIGS
 M.mason = {
-  pkgs = { "clangd", "clang-format", "codelldb", "pyright", "ltex-ls", "ruff", "mypy", "black", "debugpy",
-           "sqls"  }
+  pkgs = { "clangd", "clang-format", "codelldb", "pyright", "ltex-ls", "ruff", "mypy", "black", "debugpy", "sqls", "llm-ls"  }
 }
 
 return M
